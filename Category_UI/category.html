@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Store Admin</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- //for-mobile-apps -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- font-awesome icons -->
+<link href="css/font-awesome.css" rel="stylesheet" type="text/css" media="all" />
+<!-- //font-awesome icons -->
+<!--Google Font-->
+<link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Roboto+Condensed&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+<!--/Google Font-->
+<!-- js -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/Categories.js"></script>
+<!-- //js -->
+<script>
+	window.addEventListener('load', (event) => {
+		  console.log('page is fully loaded. checking for db health...');
+		loadAllProducts();
+		});
+</script>	
+</head>
+
+
+<body>
+<!-- banner -->
+	<div class="banner">
+		<div class="banner_nav_left">
+		<div class="logo_products_left">
+				<a href="index.html"><img src="images/logo.png" alt="logo" width="167" height="97"></a>
+				<!--<h1><a href="index.html"><span>Grocery</span> Store</a></h1> -->
+			</div>
+			<nav class="navbar nav_bottom">
+			 <!-- Brand and toggle get grouped for better mobile display -->
+			  <div class="navbar-header nav_2">
+				  <button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				  </button>
+			   </div>
+			   <!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
+					<ul class="nav navbar-nav nav_1">
+						<li><a href="storeConfig.html">Store Config</a></li>
+						<li><a href="category.html">Category</a></li>
+						<li><a href="products.html">Products</a></li>
+						<li><a href="orders.html">Orders</a></li>
+						<li><a href="users.html">Users</a></li>
+						<li><a href="offer.html">Offers</a></li>
+						<li><a href="offer.html">show my shop</a></li>
+						<li></li>
+					</ul>
+					<button class="log_out">Log Out</button>
+				 </div><!-- /.navbar-collapse -->
+			</nav>
+		</div>
+		<div class="banner_nav_right">
+			<section>
+				<div class="banner_nav_right_banner">
+						
+								<p style="font-family: 'Quicksand', sans-serif;"></p>
+								<a href="#"id="new_category_add"><button class="log_out right">Add Category</button></a>
+								<div>
+								<h3 style="font-family: 'Roboto', sans-serif;">Category Details</h3>
+								<p>
+								<span style="float:right"> Page
+								1 <<<input class="current-value" value="2">>>3<button>Go</button></span></p>
+
+								<table class="timetable_sub">
+					<thead>
+						<tr>
+							<th>Category-ID</th>
+							<th>Category</th>
+							<th>Category Details</th>
+							<th>Status</th>
+							<th>Edit</th>
+							<th>Remove</th>
+						</tr>
+					</thead>
+					<tbody id="tbody-container">
+						<tr>
+            			             		
+
+												
+			                      </tr>
+				</tbody></table>
+							</div>
+			</section>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+<!-- banner -->
+
+<!-- footer -->
+	<div class="footer"style="margin-top: 10px;">
+		<div class="container">
+			<p><b>Privacy Policy:</b> All cited trademarks are the property of their respective owners. CAUTION: The law restricts these devices to sale by or on the order of a physician. Indications, contraindications, warnings and instructions for use can be found in the product labelling supplied with each device. Information for the use only in countries with applicable health authority product registrations. </p>
+			<div class="clearfix"> </div>
+			<div class="footer_copy">
+				<p>2015 Copyright &copy; Boston Scientific Corporation. All rights reserved.</p>
+			</div>
+		</div>
+	</div>
+<!-- //footer -->
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

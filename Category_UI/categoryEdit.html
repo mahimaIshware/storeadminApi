@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Store Admin</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- //for-mobile-apps -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- font-awesome icons -->
+<link href="css/font-awesome.css" rel="stylesheet" type="text/css" media="all" /> 
+<!-- //font-awesome icons -->
+<!-- js -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/Categories.js"></script>
+<script type="text/javascript">
+	
+	$(document).ready(function() 
+			{
+    			$("#category_edit").click(function (e)
+						{
+							e.preventDefault();
+							window.addEventListener('load' ,function(event){
+							console.log('Product edit page is fully loaded.Dom is ready to manupulate functions...');
+							loadProductEditPage(new URLSearchParams(window.location.search));
+						         })
+							initAddUpdateCategory();
+						}
+						);
+            });
+	
+</script>
+</head>
+<body>
+<!-- banner -->
+	<div class="banner">
+		<div class="banner_nav_left">
+		<div class="logo_products_left">
+				<a href="index.html"><img src="images/logo.png" alt="logo" width="167" height="97"></a>
+				<!--<h1><a href="index.html"><span>Grocery</span> Store</a></h1> -->
+			</div>
+			<nav class="navbar nav_bottom">
+			 <!-- Brand and toggle get grouped for better mobile display -->
+			  <div class="navbar-header nav_2">
+				  <button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				  </button>
+			   </div> 
+			   <!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
+					<ul class="nav navbar-nav nav_1">
+						<li><a href="storeConfig.html">Store Config</a></li>
+						<li><a href="category.html">Category</a></li>
+						<li><a href="products.html">Products</a></li>
+						<li><a href="orders.html">Orders</a></li>
+						<li><a href="users.html">Users</a></li>
+						<li><a href="offer.html">Offers</a></li>
+						<li></li>
+					</ul>
+					<button class="log_out">Log Out</button>
+				 </div><!-- /.navbar-collapse -->
+			</nav>
+		</div>
+		<div class="banner_nav_right">
+			<section>
+				<div class="banner_nav_right_banner">
+						<h1 style="font-family: 'Sansita Swashed', cursive;font-size: 60px;">Dashboard</h1>
+								<h3 style="font-family: 'Roboto Condensed', sans-serif;">Welcome <span>Anurodh</span> !!</h3>
+								<div>
+								<p style="font-family: 'Quicksand', sans-serif;">You can add or modify the categories that are available in your shop.</p>							
+								
+								<div>
+								<h3 style="font-family: 'Roboto', sans-serif;">Add/ Modify a new Category</h3>
+								<div class="col-md-8">
+								
+								<form role="form" method="post" onSubmit="return formValidation();">
+									<div class="form-group">
+										<label for="exampleInputEmail1">Category_Name</label>
+										<input type="text"name="Category_Name" class="form-control" id="Category_Name" aria-describedby="emailHelp" placeholder="Category_Name">
+										<input  id="category_id_hidden" class="form-control" type="hidden" value="">
+									</div>
+									<div class="form-group">
+										<label for="exampleInputPassword1">Category_Details</label>
+										<input type="text" name="Category_Details" class="form-control" id="Category_Details" placeholder="Category_Details">
+									</div>
+									<div class="form-group">
+												<div class="controls">
+															<label class="control-label">Status: </label>
+														 	<select id="category_Status" class="form-control" type="text" placeholder="Status">
+																<option>Active</option>
+																<option >Inactive</option>
+														 	</select>
+												</div>
+									</div>
+									<button type="submit" class="btn btn-primary" id="category_edit">Submit</button>
+								</form>	
+								
+			</section>
+								
+					</div>
+							</div>
+			</section>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+<!-- banner -->
+	
+<!-- footer -->
+	<div class="footer"style="margin-top: 10px;">
+		<div class="container">
+			<p><b>Privacy Policy:</b> All cited trademarks are the property of their respective owners. CAUTION: The law restricts these devices to sale by or on the order of a physician. Indications, contraindications, warnings and instructions for use can be found in the product labelling supplied with each device. Information for the use only in countries with applicable health authority product registrations. </p>
+			<div class="clearfix"> </div>
+			<div class="footer_copy">
+				<p>2015 Copyright &copy; Boston Scientific Corporation. All rights reserved.</p>
+			</div>
+		</div>
+	</div>
+<!-- //footer -->
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+
+
+
+</html>
